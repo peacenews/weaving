@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Rudimentary php to try to setup database for List
+ * Experimental php to try to setup database for List
  * Alernatively, do this in mysql or phpmyadmin or however
  * 
  * XXX: No error reporting or handling
@@ -11,6 +11,7 @@
     $db = new DB();
     $DBH = $db->getPDOConnection();
     
+    /* PROBLEM: Initial steps would need to be done by a higher-level database user
     echo '<p>'.'Setting up List database:'.'<p>';    
     
     // Create database
@@ -27,6 +28,7 @@
         "        
     );        
     echo '<p>'.'Database user permissions should be set up now.'.'<p>';    
+    */
     
     // setup List table
     $DBH->exec("
