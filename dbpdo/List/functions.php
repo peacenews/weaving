@@ -37,7 +37,7 @@ function data2htmlTable($data, $controls = true)
         if ($controls) {
             $html .= '<td>';
             $html .= '<form action = "'.$_SERVER['PHP_SELF'].'" method = "post">'."\n";
-            $html .=  '<input type = "hidden" name = "id" id = "id" value = "'.$record['ID'].'" />'."\n";
+            $html .=  '<input type = "hidden" name = "ID" id = "ID" value = "'.$record['ID'].'" />'."\n";
             $html .= '<input type = "submit" name = "submit" id = "submit" value ="Delete">'."\n";
             $html .=  '</form>'."\n"; 
             $html .= '</td>';
