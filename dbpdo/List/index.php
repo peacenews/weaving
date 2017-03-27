@@ -44,6 +44,7 @@ if (count($_POST) > 0) {
         // TODO
         echo '<p>TODO: Delete item...'.'</p>';
         var_dump($_POST);
+        $list->delete($_POST);
     }
 }    
 ?>
