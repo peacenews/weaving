@@ -50,18 +50,7 @@ class DB
         $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         
         return $dbh;    
-    }
-        
-    /* Plain PDO connection without database specified used by db-setup */
-    function getPDOConnection()
-    {
-        // set up PDO connection
-        $dbh = new PDO("mysql:host=$this->host", $this->user, $this->pass);
-        # ERRMODE use for testing
-        $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-        
-        return $dbh;    
-    }
+    }        
 
 }
 ?>
