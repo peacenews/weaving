@@ -41,9 +41,6 @@ if (count($_POST) > 0) {
     } elseif ($_POST['submit'] == 'Update') {
         // TODO                        
     } elseif ($_POST['submit'] == 'Delete') {
-        // TODO
-        echo '<p>TODO: Delete item...'.'</p>';
-        var_dump($_POST);
         $list->delete($_POST);
     }
 }    
