@@ -39,7 +39,9 @@ if (count($_POST) > 0) {
         $list->add($_POST);
         echo '<p>'.'Item added (probably).'.'</p>'."\n";
     } elseif ($_POST['submit'] == 'Update') {
-        // TODO        
+        // TODO
+        echo '<p>TODO: Delete item...'.'</p>';        
+        var_dump($_POST);
     } elseif ($_POST['submit'] == 'Delete') {
         // TODO        
     }
