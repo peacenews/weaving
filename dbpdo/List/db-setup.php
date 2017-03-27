@@ -11,6 +11,8 @@
     
     echo '<p>'.'In development'.'</p>';    
 
+    // TODO: Check install required
+
     // TODO: Check requirements ...
     
 
