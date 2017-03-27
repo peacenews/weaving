@@ -24,7 +24,7 @@ require("db.php");
 $db = new DB();
 $DBH = $db->getPDODatabaseConnection();
 
-// 'Instantiate' a list, using the List class from list.php, and using the db connection handler 
+// 'Instantiate' a list, using the List class from simplelist.php, and using the db connection handler 
 require("simplelist.php");
 $list = new SimpleList($DBH);
 
