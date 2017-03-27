@@ -9,6 +9,12 @@
 
     require("db.php");
     $db = new DB();
+    // override db credentials to be root user
+    $db->user = "root";
+    $dbname = "";
+    $user = "";
+    $pass = "";
+    
     $DBH = $db->getPDOConnection();
     
     /* PROBLEM: Initial steps would need to be done by a higher-level database user

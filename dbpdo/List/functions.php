@@ -12,7 +12,7 @@
   }
   [1]=> etc.
 */
-function data2htmlTable($data) 
+function data2htmlTable($data, $controls = true) 
 {
     $html = "";
     $html .=  '<table border="1">'."\n";
@@ -34,7 +34,17 @@ function data2htmlTable($data)
         foreach ($record as $key => $val) {
             $html .=  '<td>'.$val.'</th>'."\n";
         }
+        if ($controls) {
+            $html .= '<td>';
+            $html .= '<form action = "'.$_SERVER['PHP_SELF'].'" method = "post">'."\n";
+            $html .=  '<input type = "text" name = "id" id = "id" value = "'.$record['ID'].'" />'."\n";
+            $html .= '<input type = "submit" name = "submit" id = "submit" value ="Delete">'."\n";
+            $html .=  '</form>'."\n"; 
+            $html .= '</td>';
+        }
         $html .=  '</tr>'."\n";
+        
+
     }    
     $html .=  '<tbody>'."\n";
     $html .=  '</table>'."\n";    

@@ -51,7 +51,7 @@ class DB
         
         return $dbh;    
     }
-    
+        
     /* Plain PDO connection without database specified used by db-setup */
     function getPDOConnection()
     {
