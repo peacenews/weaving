@@ -20,9 +20,13 @@ function data2htmlTable($data, $controls = true)
     // use first record for headers
     $html .=  '<thead>'."\n";        
     $header_row = $data[0];
-    $html .=  '</tr>'."\n";    
+    $html .=  '<tr>'."\n";    
     foreach ($header_row as $key => $val) {
         $html .=  '<th>'.$key.'</th>'."\n";
+    }
+    // leave space for control buttons
+    if ($controls) {
+    	$html .= '<th></th>';
     }
     $html .=  '</tr>'."\n";    
     $html .=  '</thead>'."\n";
