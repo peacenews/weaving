@@ -69,8 +69,9 @@ class SimpleList
        
         $sql = "UPDATE List SET Item = :Item WHERE ID = :ID;";        
         $sth = $this->dbh->prepare($sql);
-        $pdo_data = array(':ID' => $data['ID']);
-        $sth->execute($pdo_data);    }
+        $pdo_data = array(':ID' => $data['ID'], ':Item' => $data['Item']);
+        $sth->execute($pdo_data);    
+    }
     
     function delete($data)
     {
