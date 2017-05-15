@@ -37,10 +37,12 @@ function data2htmlTable($data, $controls = true)
         $html .=  '<tr>'."\n";
         foreach ($record as $key => $val) {
             if ($controls && $key != "ID") {
+                $html .= '<form action = "'.$_SERVER['PHP_SELF'].'" method = "post">'."\n";
                 $html .= '<td>'.'<input type = "text" name = "'.$key.'" value= "'.$val.'"/>';
                 $html .=  '<input type = "hidden" name = "ID" id = "ID" value = "'.$record['ID'].'" />'."\n";
                 $html .= '<input type = "submit" name = "submit" id = "submit" value ="Update">'."\n";
                 $html .= '</td>';
+                $html .= '</form>';
             } else {
                 $html .=  '<td>'.$val.'</td>'."\n";
             }
