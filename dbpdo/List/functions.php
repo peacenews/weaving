@@ -24,7 +24,7 @@ function data2htmlTable($data, $controls = true)
     foreach ($header_row as $key => $val) {
         $html .=  '<th>'.$key.'</th>'."\n";
     }
-    // leave space for control buttons
+    // leave space for delete button
     if ($controls) {
     	$html .= '<th></th>';
     }
