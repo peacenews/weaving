@@ -36,7 +36,14 @@ function data2htmlTable($data, $controls = true)
     foreach ($data as $record) {
         $html .=  '<tr>'."\n";
         foreach ($record as $key => $val) {
-            $html .=  '<td>'.$val.'</td>'."\n";
+            if ($controls && $key != "ID") {
+                $html .= '<td>'.'<input type = "text" name = "'.$key.'" value= "'.$val.'"/>';
+                $html .=  '<input type = "hidden" name = "ID" id = "ID" value = "'.$record['ID'].'" />'."\n";
+                $html .= '<input type = "submit" name = "submit" id = "submit" value ="Update">'."\n";
+                $html .= '</td>';
+            } else {
+                $html .=  '<td>'.$val.'</td>'."\n";
+            }
         }
         if ($controls) {
             $html .= '<td>';
