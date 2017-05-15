@@ -52,7 +52,7 @@ class SimpleList
     
     function add($data)
     {
-        // Using only $data['item'] at the current time
+        // Using only $data['Item'] at the current time
         // NB: do some basic security cleaning first
         $data['Item'] = $this->clean($data['Item']);
         
@@ -66,7 +66,10 @@ class SimpleList
     
     function update($data)
     {
+        // security clean
+        $data['Item'] = $this->clean($data['Item']);
        
+        // update database
         $sql = "UPDATE List SET Item = :Item WHERE ID = :ID;";        
         $sth = $this->dbh->prepare($sql);
         $pdo_data = array(':ID' => $data['ID'], ':Item' => $data['Item']);
